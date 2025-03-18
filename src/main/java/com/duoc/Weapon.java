@@ -26,5 +26,6 @@ public class Weapon extends Item {
     public void setType(String type){
         this.type = type;
     }
+    
 
 }
