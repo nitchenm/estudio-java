@@ -23,12 +23,17 @@ public class MainCharacter extends LivingEntity{
     @Override
     public void doDamage(int damage, LivingEntity enemyliLivingEntity) {
         if(this.equippedWeapon != null){
-            enemyliLivingEntity.setCurrentHealth(damage + this.equippedWeapon.getDamage());
+            enemyliLivingEntity.damageHealth(damage + this.equippedWeapon.getDamage());
         }
         else{
             equipWeapon(this.fist);
-            enemyliLivingEntity.setCurrentHealth(damage + this.equippedWeapon.getDamage());
+            enemyliLivingEntity.damageHealth(damage + this.equippedWeapon.getDamage());
         }
     }   
+
+    public void doHealing(Fruit fruit){
+        this.doHealing(fruit.getHealing());
+    }
+
     
 }

@@ -15,8 +15,12 @@ public abstract class LivingEntity {
         return currentHealth;
     }
 
-    public void setCurrentHealth(int damage){
+    public void damageHealth(int damage){
         this.currentHealth -= damage;
+    }
+
+    public void doHealing(int healToDo){
+        this.currentHealth += healToDo;
     }
 
 

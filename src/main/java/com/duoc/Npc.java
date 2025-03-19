@@ -9,7 +9,7 @@ public class Npc extends LivingEntity{
 
     @Override
     public void doDamage(int damage, LivingEntity enemyliLivingEntity) {
-        enemyliLivingEntity.setCurrentHealth(damage);
+        enemyliLivingEntity.damageHealth(damage);
     }
 
    
